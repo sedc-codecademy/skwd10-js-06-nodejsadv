@@ -10,5 +10,13 @@
   {
     "name": "painting",
     "price": 10000.5
+  },
+  {
+    "name": "dishwasher",
+    "price": 420.33
+  },
+  {
+    "name": "dishwasher",
+    "price": 420.33
   }
 ]
