@@ -1,0 +1,14 @@
+[
+  {
+    "name": "shoes",
+    "price": 30.99
+  },
+  {
+    "name": "tv",
+    "price": 540.22
+  },
+  {
+    "name": "painting",
+    "price": 10000.5
+  }
+]
