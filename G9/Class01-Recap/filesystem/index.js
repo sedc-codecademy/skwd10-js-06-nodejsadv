@@ -8,5 +8,32 @@ const path = require("path");
 const notesPath = path.join(__dirname, "notes.txt");
 const dataPath = path.join(__dirname, "data.json");
 
-fs.writeFileSync(notesPath, "First entry by trainer\n");
+// fs.writeFileSync(notesPath, "First entry by trainer\n");
 //TODO Append to the file the following "Second entry by SEDC Student\n"
+// fs.appendFileSync(notesPath, "Second entry by SEDC Student\n");
+
+const notesData = fs.readFileSync(notesPath, { encoding: "utf-8" });
+console.log(notesData);
+
+//Async Operations
+fs.readFile(dataPath, { encoding: "utf-8" }, (err, data) => {
+  if (err) throw new Error(err);
+
+  const parsedData = JSON.parse(data);
+
+  const newItem = {
+    name: "dishwasher",
+    price: 420.33,
+  };
+
+  const updatedData = [...parsedData, newItem];
+
+  fs.writeFile(dataPath, JSON.stringify(updatedData, 0, 2), () => {
+    ///TODO Read and console.log the data.json file inside this callback
+  });
+});
+
+//Async version
+// fs.appendFile(notesPath, "Second entry by SEDC Student\n", function (err) {
+//   console.log("Data is added successfully");
+// });
