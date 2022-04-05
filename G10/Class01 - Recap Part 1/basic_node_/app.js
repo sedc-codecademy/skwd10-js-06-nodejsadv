@@ -17,3 +17,21 @@ const students = [
   { fullName: "Bib Bologiw", hasPassed: false },
   { fullName: "Anna", hasPassed: true },
 ];
+
+// const {appendFile} = require("./index");
+const path = require("path");
+const fileService = require("./index");
+
+const groupStundentsByHasPassed = (studentsArray) => {
+  const passedStudentsFile = path.join(__dirname, "passedStudents.txt");
+  const notPassedStudentsFile = path.join(__dirname, "notPassed.txt");
+
+  studentsArray.forEach((student) => {
+    if (student.hasPassed) {
+      fileService.appendFile(passedStudentsFile, `\n${student.fullName}`);
+    } else {
+      fileService.appendFile(notPassedStudentsFile, `\n${student.fullName}`);
+    }
+  });
+};
+groupStundentsByHasPassed(students);
