@@ -1,0 +1,32 @@
+[
+  {
+    "id": "b3f2e33c-c4ab-42c9-bbe2-161ed5f926e0",
+    "name": "shoes",
+    "price": 30.99
+  },
+  {
+    "id": "aaaafaec-0680-4172-ad9c-1040c8e03b50",
+    "name": "tv",
+    "price": 540.22
+  },
+  {
+    "id": "346a5cce-e02c-4406-9962-e733d6382fa2",
+    "name": "painting",
+    "price": 10000.5
+  },
+  {
+    "id": "cf2bb700-9333-4b7d-98c5-9c0b8d8ba90a",
+    "name": "dishwasher",
+    "price": 410.99
+  },
+  {
+    "id": "dc71b161-d078-4e7e-a05c-ee20968a860d",
+    "name": "book",
+    "price": 30.99
+  },
+  {
+    "name": "computer",
+    "price": 30.99,
+    "id": "7e5aa53e-22a2-423e-9f03-0943d516209b"
+  }
+]
