@@ -1,0 +1,32 @@
+[
+  {
+    "id": "aaaafaec-0680-4172-ad9c-1040c8e03b50",
+    "name": "car",
+    "price": 30000
+  },
+  {
+    "id": "346a5cce-e02c-4406-9962-e733d6382fa2",
+    "name": "ball",
+    "price": 15.15
+  },
+  {
+    "id": "asdasda23123-123-1-3123-123",
+    "name": "dishwasher",
+    "price": 15000
+  },
+  {
+    "id": "dc71b161-d078-4e7e-a05c-ee20968a860d",
+    "name": "book",
+    "price": 30.99
+  },
+  {
+    "name": "computer",
+    "price": 30.99,
+    "id": "7e5aa53e-22a2-423e-9f03-0943d516209b"
+  },
+  {
+    "id": "72f52e0b-e9b8-4adf-b1a4-e16a2977bab3",
+    "name": "book",
+    "price": 50.99
+  }
+]
