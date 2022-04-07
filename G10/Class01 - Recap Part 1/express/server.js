@@ -24,7 +24,38 @@ app.get("/", (req, res) => {
  * the route will not be found, we will receive 404
  */
 app.get("/jokes", (req, res) => {
-  res.send("What is Bruce Lee's favorite drink? Wataaaaah!");
+  // res.send("What is Bruce Lee's favorite drink? Wataaaaah!");
+
+  const jokes = JSON.parse(fs.readFileSync(jokesPath, { encoding: "utf-8" }));
+
+  // res.send()
+  // res.json()
+  res.send(jokes);
+});
+
+// PATH PARAM
+app.get("/jokes/:name", (req, res) => {
+  console.log(req.params);
+  const jokeValueOfPathParam = req.params;
+
+  const jokes = JSON.parse(fs.readFileSync(jokesPath, { encoding: "utf-8" }));
+
+  const jokeFound = jokes.find(
+    (joke) => joke.jokeTitle === jokeValueOfPathParam.name
+  );
+
+  if (jokeFound) {
+    res.send(jokeFound);
+  } else {
+    res.send({ message: "Joke with that name was not found" });
+  }
+});
+
+// Query params
+app.get("/all_products", (req, res) => {
+  console.log("We are at all_products route =)");
+  console.log(req.query);
+  res.send({ message: "This is all products page" });
 });
 
 app.post("/jokes", (req, res) => {
@@ -50,6 +81,19 @@ app.get("*", (req, res) => {
   res.sendFile(errorPage);
 });
 
+const swapiUrl = "https://swapi.dev/api/people/1";
+const axios = require("axios");
+
+const getSwapiPeople = async () => {
+  const result = await axios.get(swapiUrl);
+
+  // console.log(result);
+
+  const person = result.data;
+  console.log(person);
+};
+
+getSwapiPeople();
 app.listen(3000, () => {
   console.log("Server is up and running on port 3000.");
 });

@@ -1,0 +1,26 @@
+[
+  {
+    "hotelId": 1,
+    "hotelName": "Ramada Hotel",
+    "raiting": "3.5/5",
+    "hotelRooms": "20",
+    "location": "Gevgelija",
+    "pricePerNight": "600MKD"
+  },
+  {
+    "hotelId": 2,
+    "hotelName": "Paradise",
+    "raiting": "5/5",
+    "hotelRooms": "35",
+    "location": "Skopje",
+    "pricePerNight": "1200MKD"
+  },
+  {
+    "hotelName": "Hotel Name",
+    "raiting": "5/5",
+    "hotelRooms": "12",
+    "location": "Veles",
+    "pricePerNight": "1500MKD",
+    "hotelId": "c4f3ad4f-a8c0-47a9-8211-b1932d7920bf"
+  }
+]
