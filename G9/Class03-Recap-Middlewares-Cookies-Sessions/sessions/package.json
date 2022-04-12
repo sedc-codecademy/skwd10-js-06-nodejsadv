@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js --ext *.json"
+    "dev": "nodemon index.js --ingore data/*.json"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +17,10 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "./data/*.json"
+    ]
   }
 }
