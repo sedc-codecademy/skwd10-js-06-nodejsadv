@@ -7,5 +7,9 @@ router.get("/all", StudentController.fetchAllStudents);
 router.get("/:id", StudentController.fetchStudentById);
 //Create new student
 router.post("/add", StudentController.createNewStudent);
+//Update student
+router.patch("/:id/update", StudentController.updateStudent);
+//Delete student
+router.delete("/:id", StudentController.deleteStudent);
 
 module.exports = router;

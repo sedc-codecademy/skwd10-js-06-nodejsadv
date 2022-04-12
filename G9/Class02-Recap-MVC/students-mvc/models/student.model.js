@@ -43,8 +43,32 @@ class StudentModel {
     return newStudent;
   }
   //4. Update student PATCH or PUT
-  //TODO Update student using PATCH or PUT and also check if the req.body has an id property and return a 400 status if it does.
+  static async patchStudent(studentId, studentUpdateData) {
+    const students = await this.getAllStudents();
+
+    const foundStudent = await this.getStudentById(studentId);
+
+    const updatedStudent = { ...foundStudent, ...studentUpdateData };
+
+    const updatedStudents = students.map(student =>
+      student.id === foundStudent.id ? updatedStudent : student
+    );
+
+    await DataService.saveJSONFile(studentsPath, updatedStudents);
+  }
   //5. Delete student
+  static async deleteStudent(studentId) {
+    const students = await this.getAllStudents();
+
+    const updatedStudents = students.filter(
+      student => student.id !== studentId
+    );
+
+    if (updatedStudents.length === students.length)
+      return Promise.reject({ msg: "Student Not Found" });
+
+    await DataService.saveJSONFile(studentsPath, updatedStudents);
+  }
 }
 
 module.exports = StudentModel;

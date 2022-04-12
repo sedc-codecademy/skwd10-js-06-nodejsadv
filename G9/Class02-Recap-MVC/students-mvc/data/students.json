@@ -16,12 +16,12 @@
     "grade": 4
   },
   {
-    "id": "ea0ad8f1-868a-4aee-a090-f92f9112e956",
+    "id": "23123123",
     "firstName": "Buster",
     "lastName": "Scruggs",
-    "age": 45,
+    "age": 67,
     "email": "buster@gmail.com",
-    "grade": 2
+    "grade": 5
   },
   {
     "id": "84e090e3-7f32-46dd-93c2-6a42de8c96fc",
@@ -46,13 +46,5 @@
     "age": 20,
     "email": "mona.lisa@gmail.com",
     "grade": 4
-  },
-  {
-    "id": "7109c769-6eb8-49f3-8c04-99218c15bc08",
-    "firstName": "Test",
-    "lastName": "Testerson",
-    "age": 45,
-    "email": "test.testerson@gmail.com",
-    "grade": 2
   }
 ]
