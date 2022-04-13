@@ -1,0 +1,34 @@
+[
+  {
+    "hotelId": 1,
+    "hotelName": "Apartament One",
+    "raiting": "3.5/5",
+    "hotelRooms": "20",
+    "location": "Chicago",
+    "pricePerNight": "600MKD"
+  },
+  {
+    "hotelId": 2,
+    "hotelName": "Apartament Two",
+    "raiting": "5/5",
+    "hotelRooms": "35",
+    "location": "London",
+    "pricePerNight": "1200MKD"
+  },
+  {
+    "hotelName": "Apartament Three",
+    "raiting": "5/5",
+    "hotelRooms": "12",
+    "location": "Istambul",
+    "pricePerNight": "1500MKD",
+    "hotelId": "c4f3ad4f-a8c0-47a9-8211-b1932d7920bf"
+  },
+  {
+    "id": "e68e2677-56f7-4c64-a4d2-8289c4e96790",
+    "hotelName": "Apartament Five",
+    "raiting": "1/5",
+    "hotelRooms": "2",
+    "location": "Chicago",
+    "pricePerNight": "300MKD"
+  }
+]
