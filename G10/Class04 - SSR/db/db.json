@@ -1,0 +1,6 @@
+[
+  { "carModel": "Fiat", "productionDate": 2005 },
+  { "carModel": "Lada Niva", "productionDate": 2008 },
+  { "carModel": "Ford", "productionDate": 2008 },
+  { "carModel": "Jeep", "productionDate": 2012 }
+]
