@@ -1,0 +1,7 @@
+{
+  "books": [
+    { "bookTitle": "Book Title One", "bookGenre": "Sciece Fiction" },
+    { "bookTitle": "Book Title Two", "bookGenre": "Western" },
+    { "bookTitle": "Book Title Three", "bookGenre": "Crime" }
+  ]
+}

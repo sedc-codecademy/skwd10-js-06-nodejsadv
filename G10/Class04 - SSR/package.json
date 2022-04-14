@@ -1,0 +1,17 @@
+{
+  "name": "server-side-rendering",
+  "version": "1.0.0",
+  "description": "## What is SSR? **Server-side rendering (SSR)** is a popular technique for rendering a normally client-side only single page app (SPA) on the server and then sending a fully rendered page to the client. The client’s JavaScript bundle can then take over and the SPA can operate as normal.  SSR technique is helpful in situations like the client has a slow internet connection and then rendering of the whole page on client-side takes too much time in certain situations Server Side Rendering might come as handy. One of the widely used modules used to do Server Side Rendering in Node.js is EJS Module. EJS stands for **Embedded JavaScript template**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
