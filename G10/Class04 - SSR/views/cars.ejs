@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pageTitle %></title>
+  </head>
+  <body>
+    <h1>Hello user, this is our cars EJS server side rendered =)</h1>
+    <h1><%= pageWelcomeMsg %></h1>
+    <h1><%= welcomeDescription %></h1>
+
+    <% if (authenticated) { %>
+    <div id="results">
+      <% carsData.forEach(element => { %>
+      <li>
+        Car model: <%= element.carModel %> Car production date: <%=
+        element.productionDate %>
+      </li>
+
+      <% }) %>
+    </div>
+    <% } else { %>
+    <h1 style="color: red">YOU ARE NOT AUTHENTICATED</h1>
+    <% } %>
+  </body>
+</html>

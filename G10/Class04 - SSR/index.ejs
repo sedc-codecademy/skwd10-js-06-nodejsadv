@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello world from our first EJS file</h1>
+    <h1>I am bob bobski</h1>
+    <!-- Data passed dynamicly through fullName property -->
+    <h1>I am: <%= fullName %></h1>
+    <h1>Second time <%= fullName %></h1>
+    <h1>Third time <%= fullName %></h1>
+
+    <hr />
+    <% if (isAdult) { %>
+    <h1>Yes, <%= fullName %> is adult and may enter the disco</h1>
+    <% } else { %>
+    <h1>No <%= fullName %> is not adult and may not enter disco</h1>
+    <%} %>
+  </body>
+</html>
