@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student Form</title>
+    <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+    <%- include("./templates/header.ejs") %>
+    <h2>Add Student</h2>
+    <form class="form__container" action="/students/add-student" method="POST">
+        <div class="form__control">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName">
+        </div>
+        <div class="form__control">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName">
+        </div>
+        <div class="form__control">
+            <label for="age">Age</label>
+            <input type="text" id="age" name="age">
+        </div>
+        <div class="form__control">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email">
+        </div>
+        <div class="form__control">
+            <label for="grade">Grade</label>
+            <input type="text" id="grade" name="grade">
+        </div>
+        <button type="submit">ADD</button>
+    </form>
+    <a  class="nav__link" href="/">Back To Home</a>
+</body>
+</html>

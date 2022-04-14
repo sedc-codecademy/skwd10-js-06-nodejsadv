@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example Ejs File</title>
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <header>
+    <h1>This is the student App</h1>
+  </header>
+  <body>
+    <h1>This is an ejs file</h1>
+    <!-- Writing jscript inside an .ejs file -->
+    <% 
+    console.log("this is from inside the ejs file")
+    console.log(array)
+    %>
+    <% const person = {firstName: "John", lastName: "Johnson"} %>
+    <!--Rendering output in html  -->
+    <h3>First name is: <%= person.firstName %></h3>
+    <h3>Last name is: <%= person.lastName %></h3>
+    <!-- Control logic in .ejs -->
+    <% if(person.firstName === "Boris") { %> 
+        <div>Oh it's Boris again.</div>
+    <% } else { %> 
+        <div>Who are you <%= person.firstName %>?, cause you sure ain't Boris. </div>
+    <% } %> 
+    <!-- Loops with .ejs -->
+    <ul>
+        <% for(let i = 0; i < array.length; i++) { %> 
+            <li><%= array[i] %></li>
+        <% } %> 
+    </ul>
+    <ol>
+        <% for(let item of array) { %> 
+            <li><%= item.toUpperCase() %></li>
+        <% } %> 
+    </ol>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+    <%- include("./templates/header.ejs") %>
+    <h2>Student Details</h2>
+    <% console.log(foundStudent) %> 
+    <div class="details__container">
+        <p>First Name: <span><%= foundStudent.firstName %></span></p>
+        <p>Last Name: <span><%= foundStudent.lastName %></span></p>
+        <p>Age: <span><%= foundStudent.age %></span></p>
+        <p>Email: <span><%= foundStudent.email %></span></p>
+        <p>Grade: <span><%= foundStudent.grade %></span></p>
+    </div>
+    <a class="nav__link" href="/students">Back to student list</a>
+</body>
+</html>

@@ -1,0 +1,78 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+h2 {
+  margin-left: 20px;
+}
+
+.error__container {
+  margin: 30px;
+}
+
+.error__container h1 {
+  font-size: 60px;
+  font-weight: 300;
+}
+
+.error__container h2 {
+  font-size: 35px;
+  font-weight: 300;
+}
+
+.student__list {
+  margin: 20px;
+  list-style: none;
+  width: 300px;
+  padding: 20px;
+  border: 2px solid lightblue;
+  font-size: 20px;
+}
+
+.student__item {
+  padding-bottom: 10px;
+}
+
+.nav__link {
+  margin: 20px;
+}
+
+.details__container {
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid lightblue;
+  width: 400px;
+}
+
+.details__container span {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.form__container {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid lightblue;
+  width: 300px;
+}
+
+.form__control {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+
+.form__control label {
+  margin-bottom: 5px;
+}
+
+.header {
+  background-color: lightgreen;
+}
+
+.header h1 {
+  margin: 0;
+  padding: 20px;
+}
