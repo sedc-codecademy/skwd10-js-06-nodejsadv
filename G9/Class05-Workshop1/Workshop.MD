@@ -59,3 +59,4 @@ Guidelines:
 - It is okay to reference and use code already implemented in class (ex: data.service.js).
 - There is no need to create a frontend to consume these endpoints, focus on building the api.
 - You shouldn't have extremely precise error handling but it should be implemented in a basic way for all endpoints.
+- Finish the workshop after the class on your own time and feel free to experiment and add functionality
