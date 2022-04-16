@@ -3,7 +3,9 @@ const router = require("express").Router();
 router.post("/login", (req, res) => {
   const credentials = req.body;
 
-  const users = [{ username: "qwerty", password: "qwerty" }];
+  const users = [
+    { username: "qwerty", password: "qwerty", role: "user/admin" },
+  ];
 
   const userFound = users.find(
     (user) =>
@@ -13,6 +15,7 @@ router.post("/login", (req, res) => {
 
   if (userFound) {
     req.session.authenticated = true;
+    req.session.isAdmin = userFound.role === "admin";
     res.send({ message: "User is successully logged in" });
   } else {
     req.session.authenticated = false;
