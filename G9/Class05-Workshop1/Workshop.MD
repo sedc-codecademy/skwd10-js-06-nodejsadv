@@ -1,7 +1,8 @@
 # Create an MVC structured eRestaurant application - part 01
 
-1. - Create a dish resource and implement all the crud operations for it
-   - The price should be validated when updating or adding a dish, no prices above 1000 or below 1
+1.  Create a dish resource and implement all the crud operations for it
+
+- The price should be validated when updating or adding a dish, no prices above 1000 or below 1
 
 ```
    Dish {
@@ -12,8 +13,9 @@
 
 ```
 
-2. - Create an order resource and implemented all crud operations for it
-   - Add a special patch endpoint that will only PATCH the status of an order (ex:PATCH orders/:id/status)
+2.  Create an order resource and implemented all crud operations for it
+
+- Add a special patch endpoint that will only PATCH the status of an order (ex:PATCH orders/:id/status)
 
 ```
     Order: {
@@ -27,7 +29,7 @@
 - OPTIONAL BONUS
   When creating a new order check if the dishName exists in the dishes resource (think importing one model in another)
 
-3. - Create auth model/controller that will allow users to log in (use express-session for auth)
+3.  Create auth model/controller that will allow users to log in (use express-session for auth)
 
 ```
 User: {
@@ -38,14 +40,16 @@ User: {
 }
 ```
 
-4. - Endpoints that should be available to users:
-   - GET All dishes
-   - GET Dish by id
-   - POST Order (validate that one only one order is recieved in the body with a middleware)
+4.  Endpoints that should be available to users:
 
-5. - Endpoints available to admins:
-   - All Dish Endpoints
-   - All Order Endpoints
+- GET All dishes
+- GET Dish by id
+- POST Order (validate that one only one order is recieved in the body with a middleware)
+
+5.  Endpoints available to admins:
+
+- All Dish Endpoints
+- All Order Endpoints
 
 Guidelines:
 
