@@ -7,7 +7,20 @@
    /get dishes
    /get dish by id
    /post dishes => create new dish
-   /put dishes => going to accept a dish
+
+   /put dishes => it is going to update a dish
+   put: /dishes/:id => req.body
+
+   {
+   name: Green smoothie
+   price: 120
+   },
+   {
+   id: 2
+   name: Smoothie
+   price: 100
+   }
+
    /delete dishes => remove a dish
 
    Dish {
