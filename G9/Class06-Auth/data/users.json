@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "id": "0eba4f80-9bb6-40f5-bffc-af233ed599e3",
+    "firstName": "John",
+    "lastName": "Doe",
+    "age": "29",
+    "email": "john@gmail.com",
+    "password": "$2a$08$jTh1u16f1in0dCxcsAeRB.l3rOe7BFmBTBpbz9pdIbotChyS7yHku"
+  },
+  {
+    "id": "b9265b1e-e40d-4f7b-b0c8-98aaf91515ec",
+    "firstName": "Test",
+    "lastName": "Testerson",
+    "age": "19",
+    "email": "test@yahoo.com",
+    "password": "$2a$08$sfZ8H/CenHprZGp.s/CDKe.PD/zam6HW/t3GN/tIqrPoNOuwDuMai"
+  }
+]

@@ -53,6 +53,22 @@ class AuthModel {
     return userWithoutPassword;
   }
   // 2. Login a user
+  static async loginUser(credentials) {
+    //Destructuring the credentials
+    const { email, password } = credentials;
+    //Getting the users
+    const users = await this.getAllUsers();
+    //Checking if user exists
+    const foundUser = users.find(user => user.email === email);
+    if (!foundUser) return Promise.reject({ msg: "Invalid Credentials" });
+    //Checking if the password if valid
+    const isPasswordValid = await bcrypt.compare(password, foundUser.password);
+    if (!isPasswordValid) return Promise.reject({ msg: "Invalid Credentials" });
+    //Removing hashed password from user object
+    const { password: hashedPassword, ...userWithoutPassword } = foundUser;
+
+    return userWithoutPassword;
+  }
 }
 
 module.exports = AuthModel;
