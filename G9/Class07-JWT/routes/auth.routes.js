@@ -4,6 +4,7 @@ const userValidator = require("../middleware/user-validator.middleware");
 
 router.post("/register", userValidator, AuthController.registerUser);
 router.post("/login", AuthController.loginUser);
-router.post("/logout", AuthController.logoutUser);
+router.post("/:id/logout", AuthController.logoutUser);
+router.post("/refresh-token", AuthController.refreshAccessToken);
 
 module.exports = router;

@@ -1,5 +1,9 @@
 const AuthModel = require("../models/auth.model");
-const { createAccessToken, createRefreshToken } = require("../const/jwt.const");
+const {
+  createAccessToken,
+  createRefreshToken,
+  verifyRefreshToken,
+} = require("../const/jwt.const");
 
 class AuthController {
   // 1. Register a user
@@ -38,11 +42,38 @@ class AuthController {
     }
   }
   // 3. Logout user
-  static logoutUser(req, res) {
+  static async logoutUser(req, res) {
     try {
+      const userId = req.params.id;
+
+      await AuthModel.deleteRefreshToken(userId);
+
       res.sendStatus(200);
     } catch (error) {
       res.status(400).send(error);
+    }
+  }
+  //4. Refresh token endpoint
+  static async refreshAccessToken(req, res) {
+    try {
+      const refreshToken = req.cookies["refresh-token"];
+      //If cookie doesn't exist
+      if (!refreshToken) return res.sendStatus(403);
+
+      const { userId } = verifyRefreshToken(refreshToken);
+
+      const foundUser = await AuthModel.getUserById(userId);
+
+      if (!foundUser) return res.sendStatus(403);
+
+      if (refreshToken !== foundUser.refreshToken) return res.sendStatus(403);
+
+      const token = createAccessToken(foundUser.id);
+
+      res.status(200).send({ token });
+    } catch (error) {
+      console.log(error);
+      res.status(403).send(error);
     }
   }
 }

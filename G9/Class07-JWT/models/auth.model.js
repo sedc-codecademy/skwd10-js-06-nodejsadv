@@ -91,6 +91,20 @@ class AuthModel {
 
     await DataService.saveJSONFile(usersPath, updatedUsers);
   }
+  //4. Delete refresh token
+  static async deleteRefreshToken(userId) {
+    const users = await this.getAllUsers();
+
+    const updatedUsers = users.map(user => {
+      if (user.id === userId) {
+        user.refreshToken = null;
+        return user;
+      }
+      return user;
+    });
+
+    await DataService.saveJSONFile(usersPath, updatedUsers);
+  }
 }
 
 module.exports = AuthModel;
