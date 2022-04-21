@@ -1,0 +1,19 @@
+[
+  {
+    "id": "0eba4f80-9bb6-40f5-bffc-af233ed599e3",
+    "firstName": "John",
+    "lastName": "Doe",
+    "age": "29",
+    "email": "john@gmail.com",
+    "password": "$2a$08$jTh1u16f1in0dCxcsAeRB.l3rOe7BFmBTBpbz9pdIbotChyS7yHku",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwZWJhNGY4MC05YmI2LTQwZjUtYmZmYy1hZjIzM2VkNTk5ZTMiLCJpYXQiOjE2NTA1NjM3MzYsImV4cCI6MTY1MTE2ODUzNn0.1Pw5imcUN5_wyjbfVKB8sS0_XHeZqPWss2MO2Jrqv7o"
+  },
+  {
+    "id": "b9265b1e-e40d-4f7b-b0c8-98aaf91515ec",
+    "firstName": "Test",
+    "lastName": "Testerson",
+    "age": "19",
+    "email": "test@yahoo.com",
+    "password": "$2a$08$sfZ8H/CenHprZGp.s/CDKe.PD/zam6HW/t3GN/tIqrPoNOuwDuMai"
+  }
+]

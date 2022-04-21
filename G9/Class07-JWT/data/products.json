@@ -1,0 +1,26 @@
+[
+  {
+    "id": "e36135a1-74b0-42bd-97fa-945de8b9a5a1",
+    "name": "t-shirt",
+    "price": 30,
+    "category": "clothes"
+  },
+  {
+    "id": "4303dd53-8ee0-404f-a2f1-18c7cd5c7246",
+    "name": "boots",
+    "price": 500,
+    "category": "footwear"
+  },
+  {
+    "id": "eabfce9b-cded-4540-b9c5-b84a19937ccc",
+    "name": "jacket",
+    "price": 43,
+    "category": "clothes"
+  },
+  {
+    "id": "a60f5482-4643-4019-b5d5-c19ca223a1ab",
+    "name": "shoes",
+    "price": 455,
+    "category": "footwear"
+  }
+]
