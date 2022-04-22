@@ -1,27 +1,7 @@
 # Create an MVC structured eRestaurant application - part 01
 
 1. - Create a dish resource and implement all the crud operations for it
-     (GET, POST, DELETE, PUT/PATCH)
    - The price should be validated when updating or adding a dish, no prices above 1000 or below 1
-
-   /get dishes
-   /get dish by id
-   /post dishes => create new dish
-
-   /put dishes => it is going to update a dish
-   put: /dishes/:id => req.body
-
-   {
-   name: Green smoothie
-   price: 120
-   },
-   {
-   id: 2
-   name: Smoothie
-   price: 100
-   }
-
-   /delete dishes => remove a dish
 
    Dish {
    id: string,
@@ -30,17 +10,12 @@
    }
 
 2. - Create an order resource and implemented all crud operations for it
-   - Add a special patch endpoint that will only PATCH the status of an order (ex:PATCH orders/:id/:status)
+   - Add a special patch endpoint that will only PATCH the status of an order (ex:PATCH orders/:id/status)
 
      Order: {
      id: string,
      dishName: string,
      status: string (new, cancelled, done)
-     }
-     {
-     id: '12"
-     dishName: "chicken soup"
-     status: "new"/"cancelled"/"done"
      }
 
 - OPTIONAL BONUS

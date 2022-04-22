@@ -1,0 +1,9 @@
+[
+  { "id": "1", "dishName": "Red Riding Hood Cake", "status": "canceled" },
+  { "id": "2", "dishName": "Salat", "status": "NEW" },
+  {
+    "id": "3c17aa9d-33d6-4c42-b8e2-22fd5654f85d",
+    "dishName": "Chicken soup",
+    "status": "NEW"
+  }
+]
