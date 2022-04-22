@@ -39,7 +39,7 @@ class StudentController {
       const studentId = req.params.id;
       const studentUpdates = req.body;
 
-      if (studentUpdates.id) res.status(400).send({ msg: "Invalid Update" });
+      if (studentUpdates.id) return res.status(400).send({ msg: "Invalid Update" });
 
       await StudentModel.patchStudent(studentId, studentUpdates);
 

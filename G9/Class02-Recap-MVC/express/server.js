@@ -68,7 +68,7 @@ app.patch("/:id/update", async (req, res) => {
     const items = await DataService.readJSONFile(dataPath);
 
     const foundItem = items.find(item => item.id === itemId);
-    if (!foundItem) res.status(404).json({ msg: "Item not found" });
+    if (!foundItem) return res.status(404).json({ msg: "Item not found" });
 
     const updatedItem = { ...foundItem, ...itemUpdates };
 
