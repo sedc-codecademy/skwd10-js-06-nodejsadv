@@ -27,15 +27,17 @@ class AuthController {
       const token = createAccessToken(user.id);
       //Create and send refresh token cookie to the client
       const refreshToken = createRefreshToken(user.id);
+
+      //Saving the refresh token in the database
+      await AuthModel.saveRefreshToken(user.id, refreshToken);
+
       res.cookie("refresh-token", refreshToken, {
         httpOnly: true,
         secure: false,
         path: "/refresh-token",
       });
-      //Saving the refresh token in the database
-      await AuthModel.saveRefreshToken(user.id, refreshToken);
 
-      res.status(200).send({ user, token });
+      res.status(200).send({ user, token, refreshToken });
     } catch (error) {
       console.log(error);
       res.status(401).send(error);
@@ -56,8 +58,13 @@ class AuthController {
   //4. Refresh token endpoint
   static async refreshAccessToken(req, res) {
     try {
-      const refreshToken = req.cookies["refresh-token"];
-      //If cookie doesn't exist
+      //*Cookie option
+      // const refreshToken = req.cookies["refresh-token"];
+
+      //*Request body option
+      const refreshToken = req.body.refreshToken;
+
+      //If token doesn't exist
       if (!refreshToken) return res.sendStatus(403);
 
       const { userId } = verifyRefreshToken(refreshToken);

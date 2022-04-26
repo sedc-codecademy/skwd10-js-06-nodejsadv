@@ -22,7 +22,8 @@ const tokenValidator = async (req, res, next) => {
     next();
   } catch (error) {
     console.log(error);
-    res.status(403).send(error);
+    // res.status(403).send(error);
+    res.sendStatus(403);
   }
 };
 

@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #003049;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+header h1 {
+  margin: 0;
+  padding: 30px 10px;
+  font-weight: 300;
+  font-size: 40px;
+  color: #eae2b7;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.products__page {
+  width: 100%;
+}
+
+.login__page {
+  font-size: 20px;
+  border: 2px solid #d62828;
+  margin: 50px;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #003049;
+  background-color: #eae2b7;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__control {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+
+.form__control input {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.login__btn,
+.logout__btn {
+  cursor: pointer;
+  align-self: center;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: 2px solid #003049;
+  background-color: #ffffff;
+  color: #003049;
+  margin: 15px 0 5px 0;
+}
+
+.login__btn:hover {
+  background-color: #31b7ff;
+}
+
+.login__error-msg {
+  font-size: 18px;
+  align-self: center;
+  margin: 0px;
+  margin-top: 5px;
+  color: #d62828;
+}
+
+.products__btn {
+  align-self: center;
+  font-size: 22px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: 2px solid #003049;
+  background-color: #fcbf49;
+  color: #003049;
+  margin: 15px;
+}
+
+.products__btn:hover {
+  background-color: #eae2b7;
+}
+
+.user__panel {
+  display: flex;
+  margin: 20px;
+  align-items: center;
+}
+
+.logout__btn {
+  background-color: #d62828;
+  color: #fffbe7;
+  margin: 0;
+  margin: 0px 15px;
+  border: 2px solid #eae2b7;
+}
+
+.logout__btn:hover {
+  background-color: #800000;
+}
+
+.products__table {
+  border-collapse: collapse;
+  margin: 20px;
+  width: 300px;
+}
+
+.products__table td,
+.products__table th {
+  font-size: 20px;
+  padding: 5px;
+  border: 2px solid #003049;
+}
+
+.products__table th {
+  background-color: #eae2b7;
+}
+
+.hide {
+  display: none;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>The JWT Login App</h1>
+    </header>
+    <main>
+      <section class="login__page">
+        <form class="login__form">
+          <div class="form__control">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" />
+          </div>
+          <div class="form__control">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" />
+          </div>
+          <p class="login__error-msg hide">Something is wrong</p>
+          <button class="login__btn">Login</button>
+        </form>
+      </section>
+      <section class="products__page hide">
+        <div class="user__panel">
+          <h2 class="welcome__heading">Welcome: FirstName, LastName</h2>
+          <button type="button" class="logout__btn">Logout</button>
+        </div>
+        <button type="button" class="products__btn">Get Products</button>
+      </section>
+    </main>
+  </body>
+</html>
