@@ -1,0 +1,4 @@
+/node_modules
+# WE NEVER PUSH .env files on GITHUB
+# .env
+TODO.org
