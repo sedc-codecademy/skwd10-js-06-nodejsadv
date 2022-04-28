@@ -2,6 +2,8 @@
 
 - You will continue to work on top of the code from the first workshop.
 
+[Link to first workshop](https://github.com/sedc-codecademy/skwd10-js-06-nodejsadv/blob/main/G9/Class05-Workshop1/Workshop.MD)
+
 ## Requirements:
 
 ### 1. Implement full authentication
@@ -31,6 +33,10 @@
 
 ### 5. Implement UI
 
-### 6. Extra Bonus #1 - Add Joi validation for dishes and orders
+### 6. Extra Bonus #1
 
-### 6. Extra Bonus #2 - Export your postman collections and send them along with the workshop
+- Add Joi validation for dishes and orders
+
+### 7. Extra Bonus #2
+
+- Export your postman collections and send them along with the workshop
