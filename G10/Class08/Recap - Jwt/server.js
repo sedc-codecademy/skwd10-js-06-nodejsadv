@@ -73,6 +73,7 @@ app.get("/products", auth, (req, res) => {
   ];
   console.log("Here 1", req.user);
 
+
   res.send(products);
 });
 
