@@ -1,6 +1,11 @@
 
---COMMANDS--
+--DOCUMENTATION ABOUT QUERIES
+
 https://www.mongodb.com/docs/manual/reference/operator/query/
+
+
+
+--COMMANDS--
 
 db  - check on which database we are placed
 
@@ -8,7 +13,7 @@ use "name of database" - checkout to specific database, but if that database doe
 
 db.users.find() - retreive all data from users
 
-db.users.find({firstName: "Ivan"}) - retreive data from users by parameter
+db.users.find({firstName: "Goce"}) - retreive data from users by parameter
 
 db.users.find({firstName: "Ivan", lastName: "Jamandilovski"}) - retreive data from users by two parameters at once
 
