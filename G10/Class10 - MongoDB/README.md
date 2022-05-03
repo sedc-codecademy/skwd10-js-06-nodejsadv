@@ -12,3 +12,8 @@ db.users.find({firstName: "Ivan"}) - retreive data from users by parameter
 
 db.users.find({firstName: "Ivan", lastName: "Jamandilovski"}) - retreive data from users by two parameters at once
 
+db.users.insertOne({firstName:"Bob", lastName:"Bobsky",age:28}) - inserts One user 
+
+db.users.find({age:{$lt: 30}}) -- finds all users with age less than 30 
+
+db.users.find({$or: [{firstName:"Goce"},{age:{$gte:25}}]}) - finds user that contains firstName:"Goce" or every user that has age greater than 25
