@@ -23,12 +23,16 @@ const studentSchema = new Schema({
   email: {
     type: String,
     validate: {
-      validator: val => validator.isEmail(val),
+      validator: value => validator.isEmail(value),
       message: error => `${error.value} is not a valid email`,
     },
     required: true,
     //unique creates indexes for the specified value
     unique: true,
+  },
+  course: {
+    type: Schema.Types.ObjectId,
+    ref: "Course",
   },
 });
 

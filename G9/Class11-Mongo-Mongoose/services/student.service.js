@@ -10,7 +10,10 @@ class StudentService {
   }
   //2. Get student by id
   static async getStudentById(studentId) {
-    const student = await Student.findById(studentId);
+    const student = await Student.findById(studentId).populate(
+      "course",
+      "-students"
+    );
 
     return student;
   }
