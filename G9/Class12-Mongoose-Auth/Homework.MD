@@ -8,6 +8,6 @@
 
 # Bonus (Optional)
 
-1. Add jew tokens to the auth mongoose server
+1. Add jwt tokens to the auth mongoose server
 
 2. After adding jwt add authorization to the student mongoose api by running both servers at the same time
