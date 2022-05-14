@@ -1,4 +1,5 @@
 const { getDb } = require("../database");
+const { ObjectId } = require("mongodb");
 
 class User {
   constructor(email, username, id) {
@@ -16,6 +17,16 @@ class User {
   static getAllUsers() {
     const db = getDb();
     return db.collection("users").find().toArray();
+  }
+
+  static getUserById(id) {
+    const db = getDb();
+    return db.collection("users").findOne({ _id: ObjectId(id) });
+  }
+
+  static removeUserById(id) {
+    const db = getDb();
+    return db.collection("users").deleteOne({ _id: ObjectId(id) });
   }
 }
 
