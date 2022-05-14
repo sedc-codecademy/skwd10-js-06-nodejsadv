@@ -54,7 +54,6 @@ userSchema.pre("save", async function (next) {
 
   return next();
 });
-
 //Schema method for comparing passwords
 userSchema.methods.comparePasswords = async function (credentialsPassword) {
   const isPasswordValid = await bcrypt.compare(
@@ -64,6 +63,20 @@ userSchema.methods.comparePasswords = async function (credentialsPassword) {
 
   return isPasswordValid;
 };
+//Removing hashed password from response
+userSchema.set("toJSON", {
+  transform: function (_doc, ret, _opt) {
+    delete ret.password;
+    return ret;
+  },
+});
+//Custom error for unique emails
+userSchema.post("save", (error, _doc, next) => {
+  if (error.code === 11000) {
+    next({ msg: "Email Already Exists" });
+  }
+  next();
+});
 
 const User = mongoose.model("User", userSchema);
 

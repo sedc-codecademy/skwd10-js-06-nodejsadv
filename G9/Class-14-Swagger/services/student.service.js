@@ -49,7 +49,7 @@ class StudentService {
   }
   //5. Delete student
   static async deleteStudent(studentId) {
-    await Student.findByIdAndDelete(studentId);
+    return await Student.findByIdAndDelete(studentId);
   }
 }
 
