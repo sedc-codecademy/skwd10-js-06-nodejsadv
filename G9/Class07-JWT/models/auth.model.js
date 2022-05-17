@@ -83,7 +83,7 @@ class AuthModel {
 
     const updatedUsers = users.map(user => {
       if (user.id === userId) {
-        user.refreshToken = refreshToken;
+        user.refreshTokens.push(refreshToken);
         return user;
       }
       return user;
@@ -92,12 +92,19 @@ class AuthModel {
     await DataService.saveJSONFile(usersPath, updatedUsers);
   }
   //4. Delete refresh token
-  static async deleteRefreshToken(userId) {
+  static async deleteRefreshToken(userId, refreshToken) {
     const users = await this.getAllUsers();
 
     const updatedUsers = users.map(user => {
       if (user.id === userId) {
-        user.refreshToken = null;
+        //Used for logout all functionality
+        // user.refreshTokens = []
+        user.refreshTokens = user.refreshTokens.filter(token => {
+          console.log(token);
+          console.log(refreshToken);
+          if (token !== refreshToken) return true;
+          return false;
+        });
         return user;
       }
       return user;

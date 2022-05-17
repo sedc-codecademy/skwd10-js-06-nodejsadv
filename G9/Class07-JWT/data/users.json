@@ -6,7 +6,9 @@
     "age": "29",
     "email": "john@gmail.com",
     "password": "$2a$08$jTh1u16f1in0dCxcsAeRB.l3rOe7BFmBTBpbz9pdIbotChyS7yHku",
-    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwZWJhNGY4MC05YmI2LTQwZjUtYmZmYy1hZjIzM2VkNTk5ZTMiLCJpYXQiOjE2NTA5OTg2NzIsImV4cCI6MTY1MTYwMzQ3Mn0.6_9Ku5rmg2RwSc68LS7JQ7GO1Yaqq3WRBKFUmaurNq4"
+    "refreshTokens": [
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwZWJhNGY4MC05YmI2LTQwZjUtYmZmYy1hZjIzM2VkNTk5ZTMiLCJpYXQiOjE2NTI4MDY2OTQsImV4cCI6MTY1MzQxMTQ5NH0.f3C_eH1VcOK7L5GvCjD9q1ypetDfArSxUSUaCSYBekc"
+    ]
   },
   {
     "id": "b9265b1e-e40d-4f7b-b0c8-98aaf91515ec",

@@ -47,8 +47,9 @@ class AuthController {
   static async logoutUser(req, res) {
     try {
       const userId = req.params.id;
+      const refreshToken = req.body.refreshToken;
 
-      await AuthModel.deleteRefreshToken(userId);
+      await AuthModel.deleteRefreshToken(userId, refreshToken);
 
       res.sendStatus(200);
     } catch (error) {
@@ -73,11 +74,18 @@ class AuthController {
 
       if (!foundUser) return res.sendStatus(403);
 
-      if (refreshToken !== foundUser.refreshToken) return res.sendStatus(403);
+      if (!foundUser.refreshTokens.some(token => token === refreshToken))
+        return res.sendStatus(403);
 
       const token = createAccessToken(foundUser.id);
-
-      res.status(200).send({ token });
+      //1. Create a new refresh token
+      const newRefreshToken = createRefreshToken(foundUser.id);
+      //2. Delete old refresh token
+      await AuthModel.deleteRefreshToken(foundUser.id, refreshToken);
+      //3. Save new refresh token in db
+      await AuthModel.saveRefreshToken(foundUser.id, newRefreshToken);
+      //4. Send new refresh token to client
+      res.status(200).send({ token, refreshToken: newRefreshToken });
     } catch (error) {
       console.log(error);
       res.status(403).send(error);
